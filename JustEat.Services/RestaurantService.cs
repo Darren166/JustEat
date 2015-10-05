@@ -1,28 +1,30 @@
 ﻿using JustEat.Models;
-using System;
+using JustEat.RestInterfaces;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 
 namespace JustEat.Services
 {
-    public class RestaurantService
-    {
-		public List<Restaurant> GetRestaurantsByOutcode(string outcode) {
-			return new List<Restaurant> { 
-			new Restaurant{
-				Id = 1,
-				Name = "Test",
-				NumberOfRatings = 10,
-				RatingStars = 2.0,
-				CuisineTypes = new List<CuisineType> {
-					new CuisineType {
-						Id = 1,
-						Name = "Chinese"
-					}
-				}
-			}};
+	public class RestaurantService
+	{
+		public RestaurantService(IRestClientFactory restClientFactory, IRestRequestFactory restRequestFactory)
+		{
+			this.restClientFactory = restClientFactory;
+			this.restRequestFactory = restRequestFactory;
 		}
-    }
+
+		private IRestClientFactory restClientFactory;
+		private IRestRequestFactory restRequestFactory;
+
+		public List<Restaurant> GetRestaurantsByOutcode(string outcode)
+		{
+			var restClient = restClientFactory.Create();
+			var restRequest = restRequestFactory.CreateRestaurantByOutcodeRequest(outcode);
+			var response = restClient.Execute<RestaurantDataRoot>(restRequest);
+
+			var restaurantData = response.StatusCode == HttpStatusCode.OK ? response.Data.Restaurants : new List<Restaurant>();
+
+			return restaurantData;
+		}
+	}
 }

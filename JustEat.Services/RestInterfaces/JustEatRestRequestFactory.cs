@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JustEat.RestInterfaces
 {
-	public class JustEatRestRequestFactory
+	public class JustEatRestRequestFactory : IRestRequestFactory
 	{
 		public IRestRequest CreateRestaurantByOutcodeRequest(string outcode)
 		{

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JustEat.RestInterfaces
 {
-	public class JustEatRestClientFactory
+	public class JustEatRestClientFactory : IRestClientFactory
 	{
 		public IRestClient Create()
 		{

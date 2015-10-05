@@ -48,6 +48,8 @@
     <Compile Include="Models\RestaurantDataRoot.cs" />
     <Compile Include="RestaurantService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestInterfaces\IRestClientFactory.cs" />
+    <Compile Include="RestInterfaces\IRestRequestFactory.cs" />
     <Compile Include="RestInterfaces\JustEatRestRequestFactory.cs" />
     <Compile Include="RestInterfaces\JustEatRestClientFactory.cs" />
   </ItemGroup>

@@ -14,11 +14,11 @@ namespace JustEat.Tests
 		public void GetRestaurantsByOutcode_Returns_Correctly()
 		{
 			// Given an outcode of SE19
-			var outCode = "SE19";
+			var outcode = "SE19";
 
 			// When we call the service method with that outcode
 			var restaurantService = new RestaurantService();
-			var actual = restaurantService.GetRestaurantsByOutcode(outCode);
+			var actual = restaurantService.GetRestaurantsByOutcode(outcode);
 
 			// Then the restaurant list is as expected
 			var expected = new List<Restaurant> { 
@@ -35,6 +35,21 @@ namespace JustEat.Tests
 				}
 			}};
 			actual.ShouldBeEquivalentTo(expected);
+		}
+
+		[Test]
+		public void GetRestaurantsByOutcode_Returns_Empty_List_When_No_Outcode() { 
+			// Given an empty outcode
+			var outcode = "";
+
+			// When we call the service method with that outcode
+			var restaurantService = new RestaurantService();
+			var actual = restaurantService.GetRestaurantsByOutcode(outcode);
+
+			// Then the restaurant list is empty
+			var expected = new List<Restaurant>();
+			actual.ShouldBeEquivalentTo(expected);
+
 		}
 	}
 }

@@ -1,5 +1,4 @@
-﻿using System;
-namespace JustEat.RestInterfaces
+﻿namespace JustEat.RestInterfaces
 {
 	public interface IRestRequestFactory
 	{

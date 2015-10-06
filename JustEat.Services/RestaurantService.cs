@@ -13,8 +13,8 @@ namespace JustEat.Services
 			this.restRequestFactory = restRequestFactory;
 		}
 
-		private IRestClientFactory restClientFactory;
-		private IRestRequestFactory restRequestFactory;
+		private readonly IRestClientFactory restClientFactory;
+		private readonly IRestRequestFactory restRequestFactory;
 
 		public List<Restaurant> GetRestaurantsByOutcode(string outcode)
 		{

@@ -21,7 +21,7 @@ namespace JustEat.Tests
 			var restaurantDataRoot = createRestaurantDataRoot();
 			var fakedRestClient = createFakedRestClient(restaurantDataRoot, HttpStatusCode.OK);
 			var fakedRestClientFactory = createFakeRestClientFactory(fakedRestClient);
-			
+
 			// When we call the service method
 			var restaurantService = new RestaurantService(fakedRestClientFactory, new JustEatRestRequestFactory());
 			var actual = restaurantService.GetRestaurantsByOutcode(outcode);

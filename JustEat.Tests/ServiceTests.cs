@@ -35,7 +35,7 @@ namespace JustEat.Tests
 		public void GetRestaurantsByOutcode_Returns_Empty_List_When_API_Call_Fails()
 		{
 			// Given a failed api call, regardless of restaurant data returned
-			var outcode = "SE19";
+			var outcode = "";
 			var restaurantDataRoot = new RestaurantDataRoot();
 			var fakedRestClient = createFakedRestClient(restaurantDataRoot, HttpStatusCode.NotFound);
 			var fakedRestClientFactory = createFakeRestClientFactory(fakedRestClient);

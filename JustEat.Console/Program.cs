@@ -2,11 +2,7 @@
 using JustEat.RestInterfaces;
 using JustEat.Services;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace JustEat.GUI
 {
@@ -30,9 +26,10 @@ namespace JustEat.GUI
 			}
 		}
 
-		static void displayRestaurant(Restaurant restaurant) {
+		static void displayRestaurant(Restaurant restaurant)
+		{
 			Console.WriteLine(restaurant.Name);
-			Console.WriteLine(" " + string.Join(", ", restaurant.CuisineTypes.Select(type=>type.Name)));
+			Console.WriteLine(" " + string.Join(", ", restaurant.CuisineTypes.Select(type => type.Name)));
 			Console.WriteLine(" Rated " + restaurant.RatingStars + " stars from " + restaurant.NumberOfRatings + " reviews");
 			Console.WriteLine();
 		}

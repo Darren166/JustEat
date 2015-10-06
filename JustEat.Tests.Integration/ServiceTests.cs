@@ -1,5 +1,5 @@
 ﻿using FluentAssertions;
-using JustEat.RestInterfaces;
+using JustEat.Services.RestSharpFactories;
 using JustEat.Services;
 using NUnit.Framework;
 

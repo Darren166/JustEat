@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace JustEat.Models
+namespace JustEat.Services.Models
 {
 	public class Restaurant
 	{

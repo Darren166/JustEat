@@ -1,4 +1,4 @@
-﻿namespace JustEat.RestInterfaces
+﻿namespace JustEat.Services.RestSharpFactories
 {
 	public interface IRestRequestFactory
 	{

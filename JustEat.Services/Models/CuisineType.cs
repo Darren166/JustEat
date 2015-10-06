@@ -1,5 +1,5 @@
 ﻿
-namespace JustEat.Models
+namespace JustEat.Services.Models
 {
 	public class CuisineType
 	{

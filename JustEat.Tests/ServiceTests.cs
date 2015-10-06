@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
-using JustEat.Models;
-using JustEat.RestInterfaces;
+using JustEat.Services.Models;
+using JustEat.Services.RestSharpFactories;
 using JustEat.Services;
 using Moq;
 using NUnit.Framework;

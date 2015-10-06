@@ -47,7 +47,6 @@ namespace JustEat.Tests
 			// Then the restaurant list is empty
 			var expected = new List<Restaurant>();
 			actual.ShouldBeEquivalentTo(expected);
-
 		}
 
 		private RestaurantDataRoot createRestaurantDataRoot()
